@@ -1,3 +1,4 @@
+import { ShoppingBagIcon } from "@heroicons/react/24/outline"
 import React from "react"
 import Slider from "react-slick"
 
@@ -89,10 +90,19 @@ export const Carousel = () => {
   return (
     <Slider {...settings}>
       {items.map((e, i) => (
-        <div key={i} className="outline-none flex flex-col">
+        <div key={i} className="outline-none flex flex-col px-2">
           <img className="w-60 h-60 object-cover rounded-md" src={e.image} />
-          <p className="text-center text-teal-600 mt-2 font-thin">Lorem ipsum dolor sit.</p>
+          <p className="text-center text-teal-600 mt-2 font-thin">
+            Lorem ipsum dolor sit.
+          </p>
           <p className="text-center">Rs. 350.00</p>
+          <button
+            className="flex justify-center items-center w-full gap-2 text-lg bg-black text-white rounded py-0.5 mt-"
+            type="button"
+          >
+            <ShoppingBagIcon className="h-5 w-5" />
+            Add to cart
+          </button>
         </div>
       ))}
     </Slider>

@@ -23,7 +23,7 @@ export const Banner = () => {
     <Slider {...settings}>
       {images.map((e, i) => (
         <div key={i} className="outline-none">
-          <img className="w-full h-[1000px] object-cover" src={e} />
+          <img className="w-full h-[900px] object-cover" src={e} />
         </div>
       ))}
     </Slider>
